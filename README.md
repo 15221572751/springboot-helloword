@@ -34,7 +34,7 @@
 
 –maven3.x：maven 3.3以上版本；Apache Maven 3.6.3
 
-–IntelliJIDEA2017：IntelliJ IDEA 2019.3.4 x64、STS
+–IntelliJIDEA2019：IntelliJ IDEA 2019.3.4 x64、STS
 
 –SpringBoot 2.2.6.RELEASE：2.2.6；
 
@@ -58,7 +58,7 @@
     <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
   </properties>
 </profile>
-```
+
 
 2、IDEA设置
 
