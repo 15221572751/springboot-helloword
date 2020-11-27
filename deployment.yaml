@@ -5,12 +5,12 @@ metadata:
     cattle.io/timestamp: "2020-11-27T05:47:11Z"
     cni.projectcalico.org/podIP: 10.42.0.32/32
     cni.projectcalico.org/podIPs: 10.42.0.32/32
-    field.cattle.io/ports: '[[{"containerPort":8080,"dnsName":"hello-v1-nodeport","hostPort":0,"kind":"NodePort","name":"8080tcp1","protocol":"TCP"}]]'
+    field.cattle.io/ports: '[[{"containerPort":8080,"dnsName":"hello-latest-nodeport","hostPort":0,"kind":"NodePort","name":"8080tcp1","protocol":"TCP"}]]'
   creationTimestamp: "2020-11-27T05:47:11Z"
-  generateName: hello-v1-7ffd745d67-
+  generateName: hello-latest-7ffd745d67-
   labels:
     pod-template-hash: 7ffd745d67
-    workload.user.cattle.io/workloadselector: deployment-default-hello-v1
+    workload.user.cattle.io/workloadselector: deployment-default-hello-latest
   managedFields:
   - apiVersion: v1
     fieldsType: FieldsV1
@@ -37,7 +37,7 @@ metadata:
             f:uid: {}
       f:spec:
         f:containers:
-          k:{"name":"hello-v1"}:
+          k:{"name":"hello-latest"}:
             .: {}
             f:image: {}
             f:imagePullPolicy: {}
@@ -121,23 +121,23 @@ metadata:
     manager: kubelet
     operation: Update
     time: "2020-11-27T05:47:43Z"
-  name: hello-v1-7ffd745d67-8pqsj
+  name: hello-latest-7ffd745d67-8pqsj
   namespace: default
   ownerReferences:
   - apiVersion: apps/v1
     blockOwnerDeletion: true
     controller: true
     kind: ReplicaSet
-    name: hello-v1-7ffd745d67
+    name: hello-latest-7ffd745d67
     uid: c01f562f-f3c4-4449-add8-9c78ea91757a
   resourceVersion: "51160"
-  selfLink: /api/v1/namespaces/default/pods/hello-v1-7ffd745d67-8pqsj
+  selfLink: /api/v1/namespaces/default/pods/hello-latest-7ffd745d67-8pqsj
   uid: 3895063d-e3c3-44fd-843f-8572b1ec038f
 spec:
   containers:
   - image: 15221572751/public:latest
     imagePullPolicy: Always
-    name: hello-v1
+    name: hello-latest
     ports:
     - containerPort: 8080
       name: 8080tcp1
@@ -206,9 +206,8 @@ status:
   - containerID: docker://6c1e417cac9c9cdd85ca474bbed3b34d9dddde68e905e1bafc64a4019535fc34
     image: 15221572751/public:latest
     imageID: docker-pullable://15221572751/public@sha256:10b0b62ebeb260c90a1440e14
-    490fd1b8b1557bea894102c1d7ff92c83e173a1
     lastState: {}
-    name: hello-v1
+    name: hello-latest
     ready: true
     restartCount: 0
     started: true
