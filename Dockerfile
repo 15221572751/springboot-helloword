@@ -4,3 +4,5 @@ FROM openjdk:8-jdk-slim
 WORKDIR /opt
 # 将编译的jar拷贝的当前目录
 ADD target/app.jar .
+EXPOSE 8080
+CMD ["java", "-jar", "app.jar"]
