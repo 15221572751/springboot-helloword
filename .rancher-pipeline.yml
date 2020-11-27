@@ -1,0 +1,14 @@
+stages:
+- name: package
+  steps:
+  - runScriptConfig:
+      image: java:8
+      shellScript: mvn clean package
+- name: build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: weijia/helloword
+timeout: 60
+notification: {}
