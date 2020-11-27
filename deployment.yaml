@@ -1,8 +1,8 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: helloserver-service
-  namespace: myapps
+  name: example-hello
+  namespace: default
 spec:
   selector:
     app: helloserver
