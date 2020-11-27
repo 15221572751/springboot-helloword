@@ -9,7 +9,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: 15221572751/public:latest
+      tag: 15221572751/public:${CICD_EXECUTION_SEQUENCE}
       registry: index.docker.io
 - name: deploy
   steps:
