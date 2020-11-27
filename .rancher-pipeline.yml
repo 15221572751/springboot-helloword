@@ -4,8 +4,8 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: rancherspace/public:helloV1.0
+      tag: scc/helloworldi:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: 127.0.0.1:34316
+      registry: index.docker.io
 timeout: 60
 notification: {}
