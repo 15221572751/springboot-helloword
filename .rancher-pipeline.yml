@@ -1,14 +1,11 @@
 stages:
-- name: package
-  steps:
-  - runScriptConfig:
-      image: maven:3.6.0-jdk-8-alpine
-      shellScript: mvn clean package
 - name: build
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: weijia/helloword
+      tag: rancherspace/public:helloV1.0
+      pushRemote: true
+      registry: 127.0.0.1:34316
 timeout: 60
 notification: {}
